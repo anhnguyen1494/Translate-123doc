@@ -1,6 +1,6 @@
-### Bouncing loader
+### Nảy khi tải trang
 
-Tạo ra hoạt ảnh load nảy lên 
+Hiệu ứng nảy lên khi tải trang
 
 #### HTML
 
@@ -90,14 +90,14 @@ Tạo ra hoạt ảnh load nảy lên
 
 Lưu ý: `1rem` thường là `16px`.
 
-1. `@keyframes` định nghĩa một animation có 2 trạng thái, chỗ thay đổi `opacity` và dịch chuyển trên không 2D bằng cách `transform: translateY()`.
+1. `@keyframes` định nghĩa một animation có 2 trạng thái, khi thay đổi `opacity` và dịch chuyển trên mặt phẳng 2D bằng cách sử  dụng `transform: translateY()`.
 
 2. `.bouncing-loader` đây là vùng chính của chấm tròn nảy lên và sử dụng `display: flex`
   và `justify-content: center` để đặt chúng ở giữa.
 
 3. `.bouncing-loader > div`, chọn 3 thẻ `div`s để style theo cha nó.  `div`s sẽ có chiều rồng và dài `1rem`, sử dụng `border-radius: 50%` để biến chúng từ hình vuống thành hình tròn.
 
-4. `margin: 3rem 0.2rem` chỉ định mỗi chấm tròn cách top/bot `3rem` và left/right 
+4. `margin: 3rem 0.2rem` chỉ định mỗi chấm tròn cách trên/dưới là `3rem` và trái/phải là  
     `0.2rem` để nó ko chạm vào nhau, cho nó có khoảng cách dễ thở :)).
 
 5. `animation` là một thuộc tính chung viết tắt cho các thuộc tính khác nhau: `animation-name`, `animation-duration`, `animation-iteration-count`, `animation-direction` được sử dụng.
@@ -266,16 +266,16 @@ Một hình tròn bất cứ khi nào cũng có `width` và `height` phải bằ
 
 1. `.clearfix::after` định nghĩa một phần tử giả after.
 2. `content: ''` cho phép phần tử giả ấy ảnh hưởng bố cục.
-3. `clear: both` chỉ ra rằng left/right hoặc cả 2 bên của phần tử kề với trước đó tạo thành đặt trong một khối.
+3. `clear: both` chỉ ra rằng trái/phải hoặc cả 2 bên của phần tử kề với trước đó tạo thành đặt trong một khối.
 
 #### Trình duyệt hỗ trợ
 
 <span class="snippet__support-note">⚠️ Để đoạn mã này hoạt động đúng, bạn phải đảm bảo rằng không có phần tử con non-floating trong khối chứa và không có **tall floats** trước khí container clearfixed nhưng trong cùng nội dung định dạng (e.g. floated columns).</span>
 
 <!-- tags: layout -->
-### Tỷ lệ vàng width và heigth
+### Tỷ lệ chiều rộng chiều cao không thay đổi
 
-Phần từ có width, nó sẽ đảm bảo height của nó vẫn tương ứng theo một cách tương ứng
+Phần từ có chiều rộng, nó sẽ đảm bảo chiều cao của nó vẫn tương ứng theo một cách tương ứng
 (i.e., tỉ lệ width và height không thay đổi).
 
 #### HTML
@@ -400,7 +400,7 @@ li::before {
 
 #### Giải thích
 
-Bạn có thể tạo ra một danh sách được sắp xếp sử dụng bất kì lọa HTML nào.
+Bạn có thể tạo ra một danh sách được sắp xếp sử dụng bất kì lọai HTML nào.
 
 1. `counter-reset` Khởi tạo bộ đếm, giá trị là tên của bộ đếm. Mặc đinh, bộ đếm bắt đầu từ 0. Thuộc tính này cũng có thể sử dụng để thay đổi giá trị của nó cho bất kì số cụ thể nào.
 
@@ -505,7 +505,7 @@ Có rất nhiều phần tử giả khác nhau có thể tạo ra thanh cuộn. 
 <!-- tags: visual -->
 ### Custom text selection
 
-Thay đổi kiểu dáng của lựa chọn văn bản.
+Thay đổi kiểu dáng của văn bản được chọn.
 
 #### HTML
 
@@ -721,7 +721,7 @@ Tạo ra vòng tròn xoay xoay có thể được sử dụng để chỉ việc
 
 #### Giải thích
 
-Sử dụng trong suốt 50% `border` cho toàn bộ phần tử, ngoại trừ một bên sẽ đóng vai trò cho phần quay.
+Sử dụng độ trong suốt 50% `border` cho toàn bộ phần tử, ngoại trừ một bên sẽ đóng vai trò cho phần quay.
  Sử dụng `animation` để xoay phần tử.
 
 #### Trình duyệt hỗ trợ
@@ -923,7 +923,7 @@ Các biến được sử dụng lại cho thuộc tính `transition-timing-func
 
 #### Giải thích
 
-Các biến được định nghĩa toàn cục trong `:root` CSS **pseudo-class** khớp với phần tử gốc . In HTML, `:root` represents the `<html>` element and is identical to the selector `html`, except that its specificity is higher.
+Các biến được định nghĩa toàn cục trong `:root` CSS **pseudo-class** khớp với phần tử gốc . ~~In HTML, `:root` represents the `<html>` element and is identical to the selector `html`, except that its specificity is higher.~~
 
 #### Trình duyệt hỗ trợ
 
@@ -1080,8 +1080,8 @@ Thẻ con nằm giữa trung tâm theo chiều ngang dọc, trái phải thẻ c
 #### Giải thích
 
 1. `display: flex` cho phép flexbox
-2. `justify-content: center` trung tâm theo chiều ngang.
-3. `align-items: center` trung tâm theo chiều dọc.
+2. `justify-content: center` ở giữa theo chiều ngang.
+3. `align-items: center` ở giữa theo chiều dọc.
 
 #### Trình duyệt hỗ trợ
 
@@ -1131,10 +1131,10 @@ Gives text a gradient color.
 
 #### Giải thích
 
-1. `background: -webkit-linear-gradient(...)` gives the text element a gradient background.
+1. `background: -webkit-linear-gradient(...)` ~~gives the text element a gradient background.
 2. `webkit-text-fill-color: transparent` fills the text with a transparent color.
 3. `webkit-background-clip: text` clips the background with the text, filling the text with
-   the gradient background as the color.
+   the gradient background as the color.~~
 
 #### Trình duyệt hỗ trợ
 
@@ -1184,9 +1184,9 @@ Horizontally and vertically centers a child element within a parent element usin
 
 #### Giải thích
 
-1. `display: grid` enables grid.
+~~1. `display: grid` enables grid.
 2. `justify-content: center` centers the child horizontally.
-3. `align-items: center` centers the child vertically.
+3. `align-items: center` centers the child vertically.~~
 
 #### Trình duyệt hỗ trợ
 
@@ -1373,9 +1373,9 @@ very sharp and crisp.
 
 #### Explanation
 
-1. `box-shadow`, when only using spread, adds a pseudo-border which can use subpixels\*.
+~~1. `box-shadow`, when only using spread, adds a pseudo-border which can use subpixels\*.
 2. Use `@media (min-resolution: ...)` to check the device pixel ratio (`1dppx` equals 96 DPI),
-   setting the spread of the `box-shadow` equal to `1 / dppx`.
+   setting the spread of the `box-shadow` equal to `1 / dppx`.~~
 
 #### Browser Support
 
@@ -1459,7 +1459,7 @@ Creates an animated underline effect when the text is hovered over.
 
 #### Explanation
 
-1. `display: inline-block` makes the block `p` an `inline-block` to prevent the underline from
+~~1. `display: inline-block` makes the block `p` an `inline-block` to prevent the underline from
    spanning the entire parent width rather than just the content (text).
 2. `position: relative` on the element establishes a Cartesian positioning context for pseudo-elements.
 3. `::after` defines a pseudo-element.
@@ -1471,7 +1471,7 @@ Creates an animated underline effect when the text is hovered over.
    with an `ease-out` timing function.
 9. `transform-origin: bottom right` means the transform anchor point is positioned at the bottom right of the block.
 10. `:hover::after` then uses `scaleX(1)` to transition the width to 100%, then changes the `transform-origin`
-    to `bottom left` so that the anchor point is reversed, allowing it transition out in the other direction when
+    to `bottom left` so that the anchor point is reversed, allowing it transition out in the other direction when~~
     hovered off.
 
 #### Browser support
