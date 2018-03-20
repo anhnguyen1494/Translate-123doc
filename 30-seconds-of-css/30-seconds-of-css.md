@@ -1245,7 +1245,7 @@ Basic website layout using `grid`.
 }
 ```
 
-#### Demo
+#### Bản mẫu
 
 <div class="snippet-demo">
   <div class="snippet-demo__grid-layout">
@@ -1289,7 +1289,7 @@ Basic website layout using `grid`.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
 1. `display: grid` enables grid.
 2. `grid-gap: 10px` defines spacing between the elements.
@@ -1297,9 +1297,9 @@ Basic website layout using `grid`.
 4. `grid-template-areas` defines the names of grid areas.
 5. `grid-area: sidebar` makes the element use the area with the name `sidebar`.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Yêu cầu prefixes để hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=css-grid
 
@@ -1341,7 +1341,7 @@ very sharp and crisp.
 }
 ```
 
-#### Demo
+#### Bản mẫu
 
 <div class="snippet-demo">
   <p class="snippet-demo__hairline-border">Text with a hairline border around it.</p>
@@ -1371,13 +1371,13 @@ very sharp and crisp.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
 1. `box-shadow`, when only using spread, adds a pseudo-border which can use subpixels\*.
 2. Use `@media (min-resolution: ...)` to check the device pixel ratio (`1dppx` equals 96 DPI),
    setting the spread of the `box-shadow` equal to `1 / dppx`.
 
-#### Browser Support
+#### Trình duyệt hỗ trợ
 
 <span class="snippet__support-note">⚠️ Needs alternate syntax and JavaScript user agent checking for full support.</span>
 
@@ -1427,7 +1427,7 @@ Creates an animated underline effect when the text is hovered over.
 }
 ```
 
-#### Demo
+#### Bản mẫu
 
 <div class="snippet-demo">
   <p class="snippet-demo__hover-underline-animation">Hover this text to see the effect!</p>
@@ -1457,7 +1457,7 @@ Creates an animated underline effect when the text is hovered over.
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
 1. `display: inline-block` makes the block `p` an `inline-block` to prevent the underline from
    spanning the entire parent width rather than just the content (text).
@@ -1474,9 +1474,9 @@ Creates an animated underline effect when the text is hovered over.
     to `bottom left` so that the anchor point is reversed, allowing it transition out in the other direction when
     hovered off.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Yêu cầu prefixes để hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=transforms2d
 * https://caniuse.com/#feat=css-transitions
@@ -1545,7 +1545,7 @@ btn.onmousemove = function(e) {
 }
 ```
 
-#### Demo
+#### Bản mẫu
 
 <div class="snippet-demo">
   <button class="snippet-demo__mouse-cursor-gradient-tracking">
@@ -1600,7 +1600,7 @@ btn.onmousemove = function(e) {
 })()
 </script>
 
-#### Explanation
+#### Giải thích
 
 _TODO_
 
@@ -1614,7 +1614,7 @@ var x = e.pageX - btn.offsetLeft - btn.offsetParent.offsetLeft
 var y = e.pageY - btn.offsetTop - btn.offsetParent.offsetTop
 ```
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
 <div class="snippet__requires-javascript">Requires JavaScript</div>
 <span class="snippet__support-note">⚠️ Requires JavaScript.</span>
@@ -1656,7 +1656,7 @@ li:not(:last-child) {
 }
 ```
 
-#### Demo
+#### Bản mẫu
 
 <div class="snippet-demo">
   <ul class="snippet-demo__css-not-selector-shortcut">
@@ -1685,14 +1685,14 @@ li:not(:last-child) {
 }
 </style>
 
-#### Explanation
+#### Giải thích
 
 `li:not(:last-child)` specifies that the styles should apply to all `li` elements except
 the `:last-child`.
 
-#### Browser support
+#### Trình duyệt hỗ trợ
 
-<span class="snippet__support-note">✅ No caveats.</span>
+<span class="snippet__support-note">✅ Yêu cầu prefixes để hỗ trợ đầy đủ.</span>
 
 * https://caniuse.com/#feat=css-sel3
 
