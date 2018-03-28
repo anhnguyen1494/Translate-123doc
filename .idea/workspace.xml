@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be2ffbfe-1899-4341-9975-70a99c13852b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reasons for using design patterns/Reasons for using design patterns.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common database development mistakes/common database development mistakes.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/30-seconds-of-css/30-seconds-of-css.md" afterPath="$PROJECT_DIR$/30-seconds-of-css/30-seconds-of-css.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,12 +23,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Reasons for using design patterns.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Reasons for using design patterns.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reasons for using design patterns/Reasons for using design patterns.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1748">
+              <first_editor relative-caret-position="432">
                 <caret line="76" column="156" lean-forward="false" selection-start-line="76" selection-start-column="156" selection-end-line="76" selection-end-column="156" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common database development mistakes.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common database development mistakes/common database development mistakes.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="219">
+                <caret line="141" column="26" lean-forward="false" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -63,6 +74,7 @@
       <list>
         <option value="$PROJECT_DIR$/30-seconds-of-css/30-seconds-of-css.md" />
         <option value="$PROJECT_DIR$/Reasons for using design patterns/Reasons for using design patterns.md" />
+        <option value="$PROJECT_DIR$/common database development mistakes/common database development mistakes.md" />
       </list>
     </option>
   </component>
@@ -73,7 +85,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="981" />
@@ -93,8 +105,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,11 +118,6 @@
               <item name="Translate_123doc" type="b2602c69:ProjectViewProjectNode" />
               <item name="Translate_123doc" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="30-seconds-of-css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Translate_123doc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Translate_123doc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Reasons for using design patterns" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -152,17 +159,27 @@
       <workItem from="1521080029331" duration="1561000" />
       <workItem from="1521486200565" duration="3872000" />
       <workItem from="1521541696546" duration="18000" />
-      <workItem from="1521564029348" duration="2208000" />
+      <workItem from="1521564029348" duration="2833000" />
+      <workItem from="1522170555010" duration="2000" />
+      <workItem from="1522170566833" duration="5924000" />
     </task>
+    <task id="LOCAL-00001" summary="update bản dịch Reasons-for-using-design-patterns">
+      <created>1521566947532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521566947533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24634000" />
+    <option name="totallyTimeSpent" value="31185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="981" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15709047" sideWeight="0.4954023" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16075794" sideWeight="0.4954023" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -189,21 +206,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update bản dịch Reasons-for-using-design-patterns" />
+    <option name="LAST_COMMIT_MESSAGE" value="update bản dịch Reasons-for-using-design-patterns" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ITCSS/vi.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/30-seconds-of-css-master/snippets/not-selector.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -697,8 +708,19 @@
     <entry file="file://$PROJECT_DIR$/Reasons for using design patterns/Reasons for using design patterns.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1748">
+          <first_editor relative-caret-position="432">
             <caret line="76" column="156" lean-forward="false" selection-start-line="76" selection-start-column="156" selection-end-line="76" selection-end-column="156" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common database development mistakes/common database development mistakes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="219">
+            <caret line="141" column="26" lean-forward="false" selection-start-line="141" selection-start-column="26" selection-end-line="141" selection-end-column="26" />
             <folding />
           </first_editor>
           <second_editor />
