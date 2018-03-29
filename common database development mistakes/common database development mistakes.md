@@ -12,7 +12,7 @@ WHERE bạn nên (có thể) có một chỉ mục trên đó. Các chỉ mục
 
 Cơ sở dữ liệu của bạn có thể thay đổi nhưng nếu cơ sở dữ liệu của bạn hỗ trợ tất cả tham chiếu--có nghĩa là tất cả các khóa ngoài được đảm bảo trỏ đến một thực thế tồn tại--bạn nên sử dụng nó.
 
-Rất phổ biến để thấy sự thất bại này trên cơ sở dữ liệu MySQL. Tôi không tin rằng MyISAM hỗ trợ nó. InnoDB làm được. Bạn sẽ tìm thấy những người đang sử dụng MyISAM hoặc những người đang sử dụng InnoDB nhưng dù thế nào đi nữa cũng không sử dụng nó.
+Rất phổ biến để thấy sự thất bại này trên cơ sở dữ liệu MySQL. Tôi không tin MyISAM có hỗ trợ nó. InnoDB làm được. Bạn sẽ tìm thấy những người đang sử dụng MyISAM hoặc những người đang sử dụng InnoDB nhưng dù thế nào đi nữa cũng không sử dụng nó.
 
 Thêm nữa:
 
@@ -22,7 +22,7 @@ Thêm nữa:
 
 **3. Sử dụng các khóa chính tự nhiên chứ không phải là để đại diện (kỹ thuật)**
 
-Các khóa tự nhiên là các khoá dựa trên dữ liệu bên ngoài có ý nghĩa đó (có vẻ là) duy nhất.Các ví dụ phổ biến là mã sản phẩm, mã bang 2-chữ-cái (US), **social security number** và vv.... Các khóa chính thay thế hoặc kỹ thuật chính là những khoá hoàn toàn không có ý nghĩa bên ngoài hệ thống. Chúng được sinh ra hoàn toàn để xác định thực thể vàthường là các trường tự động gia tăng (SQL Server, MySQL, khác) hoặc các trình tự (nhất là Oracle).
+Các khóa tự nhiên là các khoá dựa trên dữ liệu bên ngoài có ý nghĩa đó (có vẻ là) duy nhất.Các ví dụ phổ biến là mã sản phẩm, mã bang 2-chữ-cái (US), **social security number**(mã số công dân - giống như số cmt) và vv.... Các khóa thay thế hoặc khóa kỹ thuật là những khoá hoàn toàn không có ý nghĩa bên ngoài hệ thống. Chúng được sinh ra chỉ để xác định thực thể và thường là các trường tự động tăng gía trị (SQL Server, MySQL, khác) hoặc các gía trị trình tự (Oracle là một điển hình).
 
 Theo tôi, bạn nên **luôn luôn** sử dụng các khóa đại diện. Vấn đề này đã đưa ra trong những câu hỏi sau:
 
@@ -32,9 +32,9 @@ Theo tôi, bạn nên **luôn luôn** sử dụng các khóa đại diện. Vấ
 - [Khóa đại diên vs khóa tự nhiên/vai trò](https://stackoverflow.com/questions/63090/surrogate-vs-natural-business-keys)
 - [Tôi có nên dành riêng trường khóa chính?](https://stackoverflow.com/questions/166750/should-i-have-a-dedicated-primary-key-field)
 
-Đây là một chủ đề gây nhiều tranh cãi mà bạn sẽ không nhận được ý kiến chung.Trong khi bạn có thể tìm thấy một số người, những người nghĩ rằng các khóa tự nhiên là trong một số tình huống OK, bạn sẽ không tìm thấy bất kỳ lời chỉ trích nào khóa đại diện khác không cần thiết. Đó là một nhược điểm nhỏ nếu bạn hỏi tôi.
+Đây là một chủ đề gây nhiều tranh cãi mà bạn sẽ không nhận được ý kiến chung.Trong khi bạn có thể tìm thấy một số người nghĩ rằng các khóa tự nhiên là trong một số tình huống OK, bạn cũng sẽ không tìm thấy bất kỳ lời chỉ trích nào khóa đại diện khác không cần thiết. Đó là một nhược điểm nhỏ nếu bạn hỏi tôi.
 
-Nhớ lại, ngay đến [các quốc gia có thể không còn tồn tại](http://en.wikipedia.org/wiki/ISO_3166-1) (Ví dụ từ Yugoslavia).
+Nhớ lại, ngay cả [các quốc gia có thể không còn tồn tại](http://en.wikipedia.org/wiki/ISO_3166-1) (Ví dụ từ Yugoslavia).
 
 **4. Viết các truy vấn yêu cầu
 
@@ -44,9 +44,9 @@ Bạn thường thấy điều này trong các truy vấn ORM-generated. Nhìn v
 
 SELECT DISTINCT ...
 
-Đây là một chút của một shortcut để đảm bảo bạn không trả lại các hàng trùng lặp và do đó nhận được các đối tượng trùng lặp. Đôi khi bạn cũng thấy mọi người đang làm việc này. Nếu bạn nhìn thấy nó quá nhiều đó là một flag red thực sự. Không phải cái đó
+Đây là một chút của một shortcut để đảm bảo bạn không trả lại các hàng trùng lặp và dù đó là các đối tượng trùng lặp. Đôi khi bạn cũng thấy mọi người làm việc này. Nếu bạn nhìn thấy nó quá nhiều thì nó đáng báo động thực sự. Không phải cái đó
 
-DISTINCT là xấu hoặc không có ứng dụng hợp lệ. Nó tốt (cả 2 mặt) nhưng nó không phải đại diện hoặc tạm thời để viết các câu truy vấn đúng.
+DISTINCT có thể xấu hoặc chưa có ứng dụng phù hợp. Nó tốt (cả 2 mặt) nhưng nó không phải đại diện hoặc tạm thời để viết các câu truy vấn đúng.
 
 Từ [Tại sao tôi gét DISTINCT](http://weblogs.sqlteam.com/markc/archive/2008/11/11/60752.aspx):
 
@@ -56,7 +56,7 @@ Từ [Tại sao tôi gét DISTINCT](http://weblogs.sqlteam.com/markc/archive/20
 
 Một sai lầm phổ biến khác của nhà phát triển ứng dụng cơ sở dữ liệu  là không nhận ra phép hợp(ví dụ như mệnh đề GROUP BY) tốn kém hơn thế nào so với các phép nối.
 
-Để cung cấp cho bạn một ý tưởng về sự phổ biến rộng rãi này là, Tôi đã viết về chủ đề này nhiều lần ở đây và được downvoted rất nhiều cho nó. Ví dụ:
+Để cung cấp cho bạn một ý tưởng về sự phổ biến rộng rãi này là, Tôi đã viết về chủ đề này nhiều lần ở đây và bị downvoted rất nhiều cho nó. Ví dụ:
 
 Từ [SQL statement - “join” vs “group by and having”](https://stackoverflow.com/questions/477006/sql-statement-join-vs-group-by-and-having/477013#477013):
 
@@ -113,11 +113,11 @@ Và đột nhiên bạn có một cái nhìn rất đơn giản về dữ liệu
 
 **7.  Không cải thiện đầu vào**
 
-Đây là một cái rất lớn. Bây giờ tôi thích PHP nhưng nếu bạn không biết những gì bạn đang làm rất dễ dàng để tạo các trang web dễ bị tấn công. Không có gì kết luận nó tốt hơn so với [story of little Bobby Tables](http://xkcd.com/327/).
+Đây là một vấn đề rất lớn. Bây giờ tôi thích PHP nhưng nếu bạn không biết những gì bạn đang làm sẽ khiến các trang web dễ bị tấn công. Không có gì kết luận nó tốt hơn so với [story of little Bobby Tables](http://xkcd.com/327/).
 
 Dữ liệu được cung cấp bởi người dùng bằng các URL, dữ liệu biểu mẫu **và cookie** phải luôn được coi là không tốt và cần được lọc. Đảm bảo bạn đang nhận được những gì bạn mong đợi.
 
-**8.Không sử dụng các câu lệnh được chuẩn bị**
+**8.Không sử dụng các câu lệnh chuẩn bị**
 
 Báo cáo chuẩn bị là khi bạn biên dịch một truy vấn trừ dữ liệu được sử dụng trong chèn, cập nhật và 
 
@@ -135,11 +135,11 @@ SELECT * FROM users WHERE username = :username
 
 tùy thuộc vào nền tảng của bạn.
 
-Tôi đã từng thấy các cơ sở dữ liệu bị phá hủy vì điều này. Về cơ bản,mỗi lần bất kỳ cơ sở dữ liệu hiện đại gặp một quer mới nó phải biên dịch. Nếu nó gặp một truy vấn nó được nhìn thấy trước, bạn đang cho cơ sở dữ liệu cơ hội để cache truy vấn biên dịch và kế hoạch thực hiện. Bằng cách làm các truy vấn rất nhiều bạn đang cho cơ sở dữ liệu cơ hội tìm kiếm và tối ưu thích hợp (ví dụ, bằng cách ghim truy vấn đã biên dịch trong bộ nhớ).
+Tôi đã từng thấy các cơ sở dữ liệu bị phá hủy vì điều này. Về cơ bản,mỗi lần bất kỳ cơ sở dữ liệu hiện đại thực hiện một query mới nó phải biên dịch. Nếu nó gặp một truy vấn nó được nhìn thấy trước, bạn đang cho cơ sở dữ liệu cơ hội để cache truy vấn biên dịch và kế hoạch thực hiện. Bằng cách làm các truy vấn rất nhiều bạn đang cho cơ sở dữ liệu cơ hội tìm kiếm và tối ưu thích hợp (ví dụ, bằng cách ghim truy vấn đã biên dịch trong bộ nhớ).
 
 Sử dụng các câu lệnh chuẩn bị cũng sẽ cung cấp cho bạn số liệu thống kê có ý nghĩa Sử dụng các câu lệnh chuẩn bị cũng sẽ cung cấp cho bạn số liệu thống kê có ý nghĩa.
 
-Các câu lệnh được chuẩn bị cũng sẽ giúp bạn chống lại các cuộc tấn công SQL injection tốt hơn.
+Các câu lệnh chuẩn bị cũng sẽ giúp bạn chống lại các cuộc tấn công SQL injection tốt hơn.
 
 **9. Not normalizing enough**
 
