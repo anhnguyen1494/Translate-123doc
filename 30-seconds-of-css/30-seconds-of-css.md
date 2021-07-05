@@ -90,7 +90,7 @@ Tạo ra hoạt ảnh load nảy lên
 
 Lưu ý: `1rem` thường là `16px`.
 
-1. `@keyframes` định nghĩa một animation có 2 trạng thái, chỗ thay đổi `opacity` và dịch chuyển trên không 2D bằng cách `transform: translateY()`.
+1. `@keyframes` định nghĩa một animation có 2 trạng thái, chỗ thay đổi `opacity` và dịch chuyển ~~trên không~~ **trên mặt phẳng** 2D bằng cách `transform: translateY()`.
 
 2. `.bouncing-loader` đây là vùng chính của chấm tròn nảy lên và sử dụng `display: flex`
   và `justify-content: center` để đặt chúng ở giữa.
@@ -1092,7 +1092,7 @@ Thẻ con nằm giữa trung tâm theo chiều ngang dọc, trái phải thẻ c
 <!-- tags: layout -->
 ### Gradient text
 
-Gives text a gradient color.
+~~Gives text a gradient color~~ **cho văn bản một màu gradient**.
 
 #### HTML
 
